@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl:*)",
+      "Bash(ls:*)",
+      "Bash(file:*)",
+      "Bash(git init:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: Orpat distributor app layouts\n\n- Complete HTML/CSS layouts for distributor mobile app\n- Screen A with promotional banner, new arrivals, and product sections\n- Product images and assets included\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+    ]
+  }
+}
