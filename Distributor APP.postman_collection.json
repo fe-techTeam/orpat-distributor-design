@@ -1,0 +1,970 @@
+{
+  "info": {
+    "_postman_id": "08ba65ac-9542-432c-82b8-f5d06a3dd00e",
+    "name": "Distributor APP",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "4876775",
+    "_collection_link": "https://go.postman.co/collection/4876775-08ba65ac-9542-432c-82b8-f5d06a3dd00e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "LOGIN PAGE",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "email",
+              "value": "azamgarhdistributor@orpatgroup.com",
+              "type": "text",
+              "uuid": "32da2d4a-4d92-465f-b5f1-94decbbcbf26"
+            },
+            {
+              "key": "password",
+              "value": "06051979",
+              "type": "text",
+              "uuid": "98321216-5710-4da3-9461-f03741d8ddaa"
+            },
+            {
+              "key": "pushtoken",
+              "value": "",
+              "type": "text",
+              "uuid": "a0d796ff-fe64-49e2-a5a6-50610e98173c"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{base_url}}login",
+          "host": [
+            "{{base_url}}login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Arrival Products",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "{{base_url}}new-arrival-products",
+          "host": [
+            "{{base_url}}new-arrival-products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Last Purchase Product",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "{{base_url}}last-purchase-products?page=1&search",
+          "host": [
+            "{{base_url}}last-purchase-products"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "search",
+              "value": null,
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "People Also Bought",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "{{base_url}}people-also-bought-products?page=1&search",
+          "host": [
+            "{{base_url}}people-also-bought-products"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "search",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Assign Category Lists",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "{{base_url}}distributor-category-lists",
+          "host": [
+            "{{base_url}}distributor-category-lists"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SchemeList",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "{{base_url}}display-all-running-scheme-lists?categoryId=2",
+          "host": [
+            "{{base_url}}display-all-running-scheme-lists"
+          ],
+          "query": [
+            {
+              "key": "categoryId",
+              "value": "2"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PART LIST",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "{{base_url}}display-parts-lists-from-products?product_id=9&page=1&search",
+          "host": [
+            "{{base_url}}display-parts-lists-from-products"
+          ],
+          "query": [
+            {
+              "key": "product_id",
+              "value": "9"
+            },
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "search",
+              "value": null
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Sub Category List",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "{{base_url}}display-sub-category-lists-from-category?category_id=1",
+          "host": [
+            "{{base_url}}display-sub-category-lists-from-category"
+          ],
+          "query": [
+            {
+              "key": "category_id",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "ProductList",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "{{base_url}}display-product-lists-from-sub-category?page=1&search&subcategory_id=21",
+          "host": [
+            "{{base_url}}display-product-lists-from-sub-category"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "search",
+              "value": null
+            },
+            {
+              "key": "subcategory_id",
+              "value": "21"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Scheme Category Lists",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "{{base_url}}display-scheme-sub-category-lists?category_id=1&scheme_id=1&is_distributor_scheme=0&scheme_type=MonthlyInvoiceWiseScheme",
+          "host": [
+            "{{base_url}}display-scheme-sub-category-lists"
+          ],
+          "query": [
+            {
+              "key": "category_id",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "scheme_id",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "is_distributor_scheme",
+              "value": "0",
+              "type": "text"
+            },
+            {
+              "key": "scheme_type",
+              "value": "MonthlyInvoiceWiseScheme",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Scheme Product List",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "{{base_url}}display-scheme-product-lists?category_id=1&scheme_id=1&is_distributor_scheme=0&scheme_type=MonthlyInvoiceWiseScheme&page=1&search&sub_category_id=23",
+          "host": [
+            "{{base_url}}display-scheme-product-lists"
+          ],
+          "query": [
+            {
+              "key": "category_id",
+              "value": "1"
+            },
+            {
+              "key": "scheme_id",
+              "value": "1"
+            },
+            {
+              "key": "is_distributor_scheme",
+              "value": "0"
+            },
+            {
+              "key": "scheme_type",
+              "value": "MonthlyInvoiceWiseScheme"
+            },
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "search",
+              "value": null
+            },
+            {
+              "key": "sub_category_id",
+              "value": "23",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Save Normal SForm Order",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"products\": \"[{\\\"product_id\\\":163,\\\"quantity\\\":10,\\\"total\\\":100,\\\"color_id\\\":1,\\\"category_id\\\":2}]\",\r\n  \"total_items\": \"1\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}save-company-normal-order",
+          "host": [
+            "{{base_url}}save-company-normal-order"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Save PFORM Order",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"products\": \"[{\\\"product_id\\\":163,\\\"quantity\\\":10,\\\"total\\\":100,\\\"color_id\\\":1,\\\"category_id\\\":2}]\",\r\n  \"total_items\": \"1\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}save-company-part-order",
+          "host": [
+            "{{base_url}}save-company-part-order"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Scheme Order Preview",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"products\": \"[{\\\"product_id\\\":1248,\\\"quantity\\\":10,\\\"totalItemQuantity\\\":100,\\\"color_id\\\":39,\\\"category_id\\\":1,\\\"colorName\\\":\\\"SILVER\\\",\\\"productName\\\":\\\"OT-1800T\\\",\\\"image\\\":\\\"https://orpat-image.orpatdistributors.com/app/products/1248-39-ot-1800t-silver.png\\\",\\\"productPerBox\\\":10}]\",\r\n  \"scheme_id\": 16,\r\n  \"scheme_type\": \"MixedModelScheme\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}company-scheme-order-preview",
+          "host": [
+            "{{base_url}}company-scheme-order-preview"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Store Scheme Order",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"products\": [\r\n    {\r\n      \"product_id\": 1248,\r\n      \"quantity\": 10,\r\n      \"totalItemQuantity\": 100,\r\n      \"color_id\": 39,\r\n      \"category_id\": 1,\r\n      \"productPerBox\": 10,\r\n      \"type\": 1\r\n    },\r\n    {\r\n      \"product_id\": 585,\r\n      \"quantity\": 2,\r\n      \"totalItemQuantity\": 20,\r\n      \"color_id\": 20,\r\n      \"category_id\": 1,\r\n      \"productPerBox\": 10,\r\n      \"type\": 0\r\n    }\r\n  ],\r\n  \"scheme_id\": 16,\r\n  \"scheme_type\": \"MixedModelScheme\",\r\n  \"order_type\": \"MixedModelScheme-16\",\r\n  \"category_id\": 1\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}store-company-scheme-order",
+          "host": [
+            "{{base_url}}store-company-scheme-order"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Pending Orders",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          },
+          {
+            "key": "Accept-Encoding",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}orpat-pending-orders",
+          "host": [
+            "{{base_url}}orpat-pending-orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Approved Order",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          },
+          {
+            "key": "Accept-Encoding",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}orpat-approved-orders",
+          "host": [
+            "{{base_url}}orpat-approved-orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Dispatched Order",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          },
+          {
+            "key": "Accept-Encoding",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}orpat-dispatched-order?page=1",
+          "host": [
+            "{{base_url}}orpat-dispatched-order"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "View Invoice Details",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          },
+          {
+            "key": "Accept-Encoding",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}view-invoice-details?id=1&table_name=invoice_order_lists",
+          "host": [
+            "{{base_url}}view-invoice-details"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "table_name",
+              "value": "invoice_order_lists",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "View Order Details",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer {{token}}",
+            "type": "text"
+          },
+          {
+            "key": "Accept-Encoding",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}view-orpat-order-details?id=1&table_name=cnf_pending_part_order",
+          "host": [
+            "{{base_url}}view-orpat-order-details"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "1",
+              "type": "text"
+            },
+            {
+              "key": "table_name",
+              "value": "cnf_pending_part_order",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "",
+      "disabled": true
+    },
+    {
+      "key": "token",
+      "value": "",
+      "disabled": true
+    },
+    {
+      "key": "base_url",
+      "value": ""
+    },
+    {
+      "key": "token",
+      "value": ""
+    }
+  ]
+}
